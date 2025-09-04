@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class Calculator {
+
+
+
+    public static void main(String[] args) {
+        float first = 0, second = 0;char operator=0;
+        //taking input of first and second number
+        System.out.print("Enter the First Number :  ");
+        Scanner f = new Scanner(System.in);
+        first = f.nextFloat();
+
+        System.out.print("Enter the Second Number :  ");
+        Scanner s = new Scanner(System.in);
+        second = s.nextFloat();
+        // taking of operator from the user
+        System.out.print("Choose the operator :  ");
+        Scanner o = new Scanner(System.in);
+        operator = o.next().charAt(0);
+        if ( operator == '+' ){
+            System.out.println(first+second);
+        }
+         else if ( operator == '-' ){
+             if (first>second){
+                 System.out.println(first-second);
+             }
+             else{
+                 System.out.println(second-first);
+
+             }
+
+        }
+        else if ( operator == '*' ){
+            System.out.println(first*second);
+        }
+        else if ( operator == '/' ){
+            System.out.println(first/second);
+        }
+        else {
+            System.out.println("invalid Input...\nPlease Enter Between ( + , - , * , / ) .");
+        }
+
+
+    }
+}
+
+
